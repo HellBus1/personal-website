@@ -30,3 +30,14 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 yarn add -D tailwindcss postcss autoprefixer
 npx tailwindcss init -p
 ```
+2. Font Awesome
+```typescript
+yarn add @fortawesome/fontawesome-svg-core \
+        @fortawesome/free-solid-svg-icons \
+        @fortawesome/free-brands-svg-icons \
+        @fortawesome/react-fontawesome --save
+```
+3. Moment
+```typescript
+yarn add moment --save
+```
