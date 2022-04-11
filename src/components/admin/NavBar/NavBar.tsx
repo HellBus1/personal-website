@@ -51,9 +51,9 @@ const NavBar = ({ barsCallback }: innerProps): React.ReactElement => {
     return () => {
       clearInterval(interval);
     };
-  }, []);
+  }, [timestamp]);
 
-  return <nav className="flex flex-row bg-slate-50 w-full py-2 px-7 drop-shadow-md items-center">
+  return <nav className="flex flex-row bg-slate-50 w-full py-3 px-7 drop-shadow-md items-center">
     <div className='block md:hidden'>
       <FontAwesomeIcon icon={'bars'} size={'lg'} onClick={() => barsCallback()} className="cursor-pointer" />
     </div>
