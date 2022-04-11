@@ -41,3 +41,7 @@ yarn add @fortawesome/fontawesome-svg-core \
 ```typescript
 yarn add moment --save
 ```
+4. Daisy UI
+```typescript
+yarn add daisyui --save
+```

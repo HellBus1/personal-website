@@ -21,17 +21,17 @@ const NavBar = ({ barsCallback }: innerProps): React.ReactElement => {
         <p>Selamat Malam</p>
       </div>
     } else if (hours >= 5 && hours <= 11) {
-      return <div>
+      return <div className='flex flex-row items-center justify-end space-x-2'>
         <FontAwesomeIcon icon={'sun'} color={'#FFAA33'} />
         <p>Selamat Pagi</p>
       </div>
     } else if (hours >= 12 && hours <= 17) {
-      return <div>
+      return <div className='flex flex-row items-center justify-end space-x-2'>
         <FontAwesomeIcon icon={'sun'} color={'#FFAA33'} />
         <p>Selamat Siang</p>
       </div>
     } else if (hours >= 18 && hours < 0) {
-      return <div>
+      return <div className='flex flex-row items-center justify-end space-x-2'>
         <FontAwesomeIcon icon={'moon'} color={'#FFEA00'} />
         <p>Selamat Sore</p>
       </div>
@@ -54,8 +54,8 @@ const NavBar = ({ barsCallback }: innerProps): React.ReactElement => {
   }, []);
 
   return <nav className="flex flex-row bg-slate-50 w-full py-2 px-7 drop-shadow-md items-center">
-    <div>
-      <FontAwesomeIcon icon={'bars'} size={'lg'} onClick={() => barsCallback()} />
+    <div className='block md:hidden'>
+      <FontAwesomeIcon icon={'bars'} size={'lg'} onClick={() => barsCallback()} className="cursor-pointer" />
     </div>
     <div className="flex flex-col text-right flex-1">
       {getGreeting()}

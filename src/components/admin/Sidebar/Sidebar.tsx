@@ -25,9 +25,9 @@ const Sidebar = ({ isDrawerOpen }: innerProps): React.ReactElement => {
 
     return menus
   }
-  // 
+  // 2xl:basis-1/6 xl:basis-1/5 lg:basis-1/4 md:basis-1/3
 
-  return <aside className={`md:min-h-screen flex-col bg-slate-700 2xl:basis-1/6 xl:basis-1/5 lg:basis-1/4 md:basis-1/3 ease-in-out transition-all z-40 ease-in-out duration-300 hidden md:block ${isDrawerOpen ? "translate-x-full " : "translate-x-0"}`}>
+  return <aside className={`md:min-h-screen flex-col bg-slate-700 transition-all z-40 ease-in-out duration-300 ${isDrawerOpen ? "translate-x-0 " : "sm:translate-x-0 -translate-x-full"} translate-x-0 absolute md:static bottom-0 top-0 w-72`}>
     <div className="flex flex-row justify-center items-center py-5">
       <p className="text-white">Personal</p>
     </div>
