@@ -44,3 +44,19 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+## Dependencies
+1. React Router
+```typescript
+yarn add react-router-dom
+```
+2. Redux
+```typescript
+yarn add @reduxjs/toolkit
+yarn add redux-persist
+```
+3. Cookie Storage
+```typescript
+yarn add redux-persist-cookie-storage
+yarn add cookies-js
+```
