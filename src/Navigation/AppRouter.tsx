@@ -1,26 +1,26 @@
-import Route from "../Models/Route"
+import React from "react";
 import {
-  BrowserRouter,
   Routes as ReactRoutes,
   Route as ReactRoute,
 } from "react-router-dom";
 import Routes from "./Routes";
 
 const AppRouter: React.FC = () => {
-  const isAdmin = false;
 
   return (<ReactRoutes>
     {
       Routes.map((route, index) => {
         if (route.isProtected) {
           return <ReactRoute
+            key={index}
             path={route.path}
             element={<></>}
           />
         }
         return <ReactRoute
+          key={index}
           path={route.path}
-          element={route.component}
+          element={React.createElement(route.component)}
         />
       })
     }

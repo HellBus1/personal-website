@@ -49,14 +49,20 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 1. React Router
 ```typescript
 yarn add react-router-dom
+yarn add @types/react-dom
 ```
 2. Redux
 ```typescript
 yarn add @reduxjs/toolkit
 yarn add redux-persist
+yarn add react-redux
 ```
 3. Cookie Storage
 ```typescript
 yarn add redux-persist-cookie-storage
 yarn add cookies-js
+```
+4. Tailwind
+```typescript
+npm install -D tailwindcss postcss autoprefixer
 ```

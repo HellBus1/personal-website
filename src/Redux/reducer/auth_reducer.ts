@@ -1,9 +1,10 @@
-import { AuthAction } from "../action";
+
+import { AuthAction } from "../action/auth_action";
 import { AuthState } from "../state";
 
 const initialState: AuthState = {
-  accessToken: "",
-  refreshToken: ""
+  accessToken: "access_token",
+  refreshToken: "refresh_token"
 }
 
 const AuthReducer = (state: AuthState = initialState, action: AuthAction) => {
