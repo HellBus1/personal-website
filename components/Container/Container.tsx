@@ -2,6 +2,7 @@ import Head from "next/head";
 import React, { FC, ReactNode } from "react";
 import Image from 'next/image';
 import styles from '../../styles/Home.module.css';
+import CustomAppBar from "components/AppBar/CustomAppBar";
 
 interface Props {
   children: ReactNode;
@@ -9,6 +10,7 @@ interface Props {
 
 const Container: FC<Props> = (props) => {
   return <>
+    <CustomAppBar />
     <Head>
       <title>Create Next App</title>
       <link rel="icon" href="/favicon.ico" />
