@@ -23,14 +23,11 @@ const CustomAppBar = (props: Props): ReactElement => {
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-      <Typography variant="h6" sx={{ my: 2 }}>
-        MUI
-      </Typography>
       <Divider />
       <List>
         {routes.map((item) => (
           <ListItem key={item.name} disablePadding>
-            <ListItemButton sx={{ textAlign: 'center' }}>
+            <ListItemButton>
               <ListItemText primary={item.name} />
             </ListItemButton>
           </ListItem>
@@ -52,13 +49,23 @@ const CustomAppBar = (props: Props): ReactElement => {
           >
             <MenuIcon fontSize="large" />
           </IconButton>
-          <Box sx={{ display: { xs: 'none', sm: 'block' }, ml: 5.6 }}>
-            {routes.map((item) => (
-              <Link href={item.path}>
-                <Button key={item.name} sx={{ color: '#000' }}>
-                  {item.name}
-                </Button>
-              </Link>
+          <Box sx={{
+            display: { xs: 'none', sm: 'flex' },
+            // backgroundColor: '#000',
+            width: '100%',
+            position: 'absolute',
+            left: 0,
+            right: 0,
+            justifyContent: 'center'
+          }}>
+            {routes.map((item, index) => (
+              <Box key={index} sx={{ ml: index > 0 ? 2 : 0 }}>
+                <Link href={item.path}>
+                  <Button key={item.name} sx={{ color: '#000', fontSize: 16 }}>
+                    {item.name}
+                  </Button>
+                </Link>
+              </Box>
             ))}
           </Box>
         </Toolbar>
