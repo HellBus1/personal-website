@@ -4,7 +4,8 @@ import React, { ReactElement } from "react";
 const BlogSC = (): ReactElement => {
   return <Box sx={{
     paddingLeft: 10,
-    paddingTop: 5
+    // paddingTop: 30,
+    paddingBottom: 10
   }}>
     <Typography sx={classes.title}>
       Featured Posts
