@@ -1,8 +1,11 @@
-import { AppBar, Box, Button, Divider, Drawer, IconButton, List, ListItem, ListItemButton, ListItemText, Toolbar, Typography } from "@mui/material";
-import { routes } from "config/customRoute";
-import Link from "next/link";
-import React, { ReactElement, useState } from "react";
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import MenuIcon from '@mui/icons-material/Menu';
+import { AppBar, Box, Divider, Drawer, IconButton, List, ListItem, ListItemButton, ListItemText, Toolbar } from "@mui/material";
+import { routes } from "lib/config/customRoute";
+import Link from "next/link";
+import { ReactElement, useState } from "react";
+import AppBarItem from "./components/AppBarItem";
 
 interface Props {
   /**
@@ -22,7 +25,7 @@ const CustomAppBar = (props: Props): ReactElement => {
   }
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
+    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center', zIndex: 99 }}>
       <Divider />
       <List>
         {routes.map((item) => (
@@ -38,8 +41,8 @@ const CustomAppBar = (props: Props): ReactElement => {
 
   return <>
     <Box component="nav">
-      <AppBar component={'nav'} color="transparent">
-        <Toolbar>
+      <AppBar component={'nav'} position="fixed">
+        <Toolbar variant='dense'>
           <IconButton
             color="inherit"
             aria-label="open drawer"
@@ -49,27 +52,32 @@ const CustomAppBar = (props: Props): ReactElement => {
           >
             <MenuIcon fontSize="large" />
           </IconButton>
+
           <Box sx={{
             display: { xs: 'none', sm: 'flex' },
-            // backgroundColor: '#000',
-            width: '100%',
             position: 'absolute',
-            left: 0,
-            right: 0,
-            justifyContent: 'center'
+            left: '5rem',
+            right: '5rem',
+            justifyContent: 'space-between'
           }}>
-            {routes.map((item, index) => (
-              <Box key={index} sx={{ ml: index > 0 ? 2 : 0 }}>
-                <Link href={item.path}>
-                  <Button key={item.name} sx={{ color: '#000', fontSize: 16 }}>
-                    {item.name}
-                  </Button>
+
+            <Box sx={{ display: 'flex', flexDirection: 'row' }}>
+              {routes.map((item, index) => (
+                <Link key={index} href={item.path}>
+                  <AppBarItem itemTitle={item.name} index={index} />
                 </Link>
-              </Box>
-            ))}
+              ))}
+            </Box>
+
+
+            <Box sx={{ right: 0 }}>
+              <GitHubIcon />
+              <LinkedInIcon sx={{ marginLeft: 2 }} />
+            </Box>
           </Box>
         </Toolbar>
       </AppBar>
+
       <Drawer
         container={container}
         variant="temporary"

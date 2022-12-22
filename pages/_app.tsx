@@ -1,6 +1,6 @@
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
-import createEmotionCache from 'config/createEmotionCache';
+import createEmotionCache from 'lib/config/createEmotionCache';
 import { EmotionCache } from '@emotion/cache';
 import { CacheProvider } from '@emotion/react';
 import Head from 'next/head';
