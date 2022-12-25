@@ -31,7 +31,7 @@ const themeOptions: ThemeOptions = {
   },
   palette: {
     primary: {
-      main: '#258F91',
+      main: '#fefefe',
     },
     secondary: {
       main: '#1D076D',
@@ -42,6 +42,15 @@ const themeOptions: ThemeOptions = {
     error: {
       main: '#be3c3c',
     },
+    text: {
+      primary: '#303881',
+      secondary: '#757d9c',
+      disabled: '#516178'
+    },
+    action: {
+      selected: '#444bd0',
+      active: '#323f52'
+    }
   },
   spacing: 8,
   components: {

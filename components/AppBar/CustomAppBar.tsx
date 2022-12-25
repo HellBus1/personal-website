@@ -1,9 +1,8 @@
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import MenuIcon from '@mui/icons-material/Menu';
-import { AppBar, Box, Divider, Drawer, IconButton, List, ListItem, ListItemButton, ListItemText, Toolbar } from "@mui/material";
+import { AppBar, Box, Chip, Divider, Drawer, IconButton, Link, List, ListItem, ListItemButton, ListItemText, Toolbar } from "@mui/material";
 import { routes } from "lib/config/customRoute";
-import Link from "next/link";
 import { ReactElement, useState } from "react";
 import AppBarItem from "./components/AppBarItem";
 
@@ -41,8 +40,8 @@ const CustomAppBar = (props: Props): ReactElement => {
 
   return <>
     <Box component="nav">
-      <AppBar component={'nav'} position="fixed">
-        <Toolbar variant='dense'>
+      <AppBar component={'nav'} position="absolute" elevation={0}  >
+        <Toolbar variant='regular'>
           <IconButton
             color="inherit"
             aria-label="open drawer"
@@ -58,21 +57,34 @@ const CustomAppBar = (props: Props): ReactElement => {
             position: 'absolute',
             left: '5rem',
             right: '5rem',
-            justifyContent: 'space-between'
+            justifyContent: 'space-between',
           }}>
 
-            <Box sx={{ display: 'flex', flexDirection: 'row' }}>
+            <Box sx={{ display: 'flex', flexDirection: 'row', mt: '4px' }}>
               {routes.map((item, index) => (
-                <Link key={index} href={item.path}>
-                  <AppBarItem itemTitle={item.name} index={index} />
-                </Link>
+                <AppBarItem itemTitle={item.name} index={index} path={item.path} />
               ))}
             </Box>
 
 
-            <Box sx={{ right: 0 }}>
-              <GitHubIcon />
-              <LinkedInIcon sx={{ marginLeft: 2 }} />
+            <Box display={'flex'} flexDirection={'row'} alignItems={'center'}>
+              <Chip
+                label="v1.0.0"
+                onClick={() => { }}
+                sx={{
+                  backgroundColor: '#eef3f8',
+                  mr: 2,
+                }}
+              />
+              <Divider orientation='vertical' variant='middle' />
+              <Box sx={{ ml: 2, mt: '4px' }} alignItems={'center'}>
+                <Link href='https://github.com/HellBus1' target={'_blank'}>
+                  <GitHubIcon sx={{ "&:hover": { color: '#333' }, color: 'text.disabled' }} />
+                </Link>
+                <Link href='https://www.linkedin.com/in/syubban/' target={'_blank'}>
+                  <LinkedInIcon sx={{ marginLeft: 1.5, "&:hover": { color: '#006192' }, color: 'text.disabled' }} />
+                </Link>
+              </Box>
             </Box>
           </Box>
         </Toolbar>

@@ -2,18 +2,18 @@ import { Box, SxProps, Theme, Typography } from "@mui/material";
 import Container from "components/Container/Container";
 import { NextPage } from "next";
 
-const Blog: NextPage = () => {
+const Snippet: NextPage = () => {
   return <Container>
     <Box sx={classes.container}>
       <Typography sx={classes.title}>
-        Blogs
+        Snippets
       </Typography>
       <Typography sx={classes.subtitle}>
-        All about tutorials, toughts, trend in technologies
+        Showcase of my works
       </Typography>
-    </Box>;
+    </Box>
   </Container>;
-}
+};
 
 const classes: Record<string, SxProps<Theme>> = {
   container: {
@@ -29,4 +29,4 @@ const classes: Record<string, SxProps<Theme>> = {
   }
 };
 
-export default Blog;
+export default Snippet;
