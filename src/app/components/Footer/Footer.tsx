@@ -35,7 +35,7 @@ const Footer = () => {
       </div>
       <div>
         <div className="grid grid-flow-col gap-4">
-          <Link href={""}>
+          <Link href={"https://twitter.com/Syubban5"}>
             <TwitterSquareFilled className="text-3xl" />
           </Link>
           <Link href={"https://medium.com/@syubbanfakhriya"}>
