@@ -1,4 +1,3 @@
-import NavbarEndItem from "./components/NavbarEndItem";
 import NavLink from "./components/NavLink";
 
 const Navbar = () => {
@@ -16,7 +15,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="navbar bg-neutral">
+    <nav className="sticky top-0 navbar bg-neutral">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -47,8 +46,7 @@ const Navbar = () => {
           {links.map((link) => renderLink(link))}
         </ul>
       </div>
-      <NavbarEndItem/>
-    </div>
+    </nav>
   );
 };
 

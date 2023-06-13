@@ -13,7 +13,7 @@ const NavLink = (props: NavLinkProps) => {
 
   return (
     <li key={props.url}>
-      <Link href={props.url} className={`text-neutral-content ${(pathName === props.url) ? 'font-extrabold' : 'font-medium'}`}>
+      <Link href={props.url} className={`text-neutral-content ${(pathName === props.url) ? 'font-black' : 'font-medium'}`}>
         {props.text}
       </Link>
     </li>
