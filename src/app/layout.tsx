@@ -1,5 +1,6 @@
-import { poppins } from '@/utils/fonts'
+
 import './globals.css'
+import { poppins } from './lib/fonts'
 
 export const metadata = {
   title: 'Syubban Fakhriya',
