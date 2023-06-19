@@ -3,15 +3,29 @@
 import Link from "next/link";
 import Typewriter from "typewriter-effect";
 import {
-  GithubOutlined,
-  MediumCircleFilled,
-  TwitterCircleFilled,
-} from "@ant-design/icons";
+  SiLinkedin,
+  SiMedium,
+  SiTwitter
+} from "react-icons/si";
+import Image from "next/image";
 
 const OverviewSection = () => {
   return (
     <section className="h-screen flex flex-col justify-center items-center">
       <div className="flex flex-col justify-center items-center">
+        <div className="avatar mb-8">
+          <div className="w-52 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+            <Image
+              alt=""
+              src={'/image/avatar.jpg'}
+              fill={true}
+              style={{
+                objectFit: 'cover',
+              }}
+              className="rounded-full"
+            />
+          </div>
+        </div>
         <p className="text-neutral-content text-xl font-medium mb-3">
           Hello, I&apos;m Syubban Fakhriya
         </p>
@@ -39,8 +53,8 @@ const OverviewSection = () => {
           className="flex flex-row items-center justify-center"
           href={"https://github.com/HellBus1"}
         >
-          <GithubOutlined className="text-xl" />
-          <p className="text-neutral-content mt-1 ms-2">HellBus1</p>
+          <SiLinkedin className="text-xl" />
+          <p className="text-base-content mt-1 ms-2">HellBus1</p>
         </Link>
 
         <div className="border-l mx-4"></div>
@@ -49,8 +63,8 @@ const OverviewSection = () => {
           className="flex flex-row items-center justify-center"
           href={"https://medium.com/@syubbanfakhriya"}
         >
-          <MediumCircleFilled className="text-xl" />
-          <p className="text-neutral-content mt-1 ms-2">@syubbanfakhriya</p>
+          <SiMedium className="text-xl" />
+          <p className="text-base-content mt-1 ms-2">@syubbanfakhriya</p>
         </Link>
 
         <div className="border-l mx-4"></div>
@@ -59,12 +73,12 @@ const OverviewSection = () => {
           className="flex flex-row items-center justify-center"
           href={"https://twitter.com/Syubban5"}
         >
-          <TwitterCircleFilled className="text-xl" />
-          <p className="text-neutral-content ms-2">@Syubban5</p>
+          <SiTwitter className="text-xl" />
+          <p className="text-base-content ms-2">@Syubban5</p>
         </Link>
       </div>
 
-      <button className="btn btn-outline btn-neutral-content rounded-full mt-8">
+      <button className="btn btn-outline text-neutral-content rounded-full mt-8">
         Download Resume
       </button>
     </section>

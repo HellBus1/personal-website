@@ -1,11 +1,11 @@
 "use client";
 
 import {
-  GithubFilled,
-  LinkedinFilled,
-  MediumSquareFilled,
-  TwitterSquareFilled,
-} from "@ant-design/icons";
+  SiGithub,
+  SiLinkedin,
+  SiMedium,
+  SiTwitter,
+} from "react-icons/si";
 import Link from "next/link";
 
 const Footer = () => {
@@ -38,16 +38,16 @@ const Footer = () => {
         <p className="font-medium">Reach me out</p>
         <div className="grid grid-flow-col gap-4">
           <Link href={"https://twitter.com/Syubban5"}>
-            <TwitterSquareFilled className="text-3xl" />
+            <SiTwitter className="text-3xl" />
           </Link>
           <Link href={"https://medium.com/@syubbanfakhriya"}>
-            <MediumSquareFilled className="text-3xl" />
+            <SiMedium className="text-3xl" />
           </Link>
           <Link href={"https://www.linkedin.com/in/syubban/"}>
-            <LinkedinFilled className="text-3xl" />
+            <SiLinkedin className="text-3xl" />
           </Link>
           <Link href={"https://github.com/HellBus1"}>
-            <GithubFilled className="text-3xl" />
+            <SiGithub className="text-3xl" />
           </Link>
         </div>
       </div>
