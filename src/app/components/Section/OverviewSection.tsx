@@ -11,14 +11,15 @@ import Image from "next/image";
 
 const OverviewSection = () => {
   return (
-    <section className="h-screen flex flex-col justify-center items-center">
+    <section className="min-h-screen flex flex-col justify-center items-center">
       <div className="flex flex-col justify-center items-center">
         <div className="avatar mb-8">
-          <div className="w-52 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+          <div className="w-56 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
             <Image
               alt=""
               src={'/image/avatar.jpg'}
               fill={true}
+              sizes={'(max-width: 768px) 100vw'}
               style={{
                 objectFit: 'cover',
               }}

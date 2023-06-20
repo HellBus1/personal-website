@@ -58,8 +58,8 @@ const FeaturedBlogSection = () => {
   ];
 
   const data = {
-    data: datas
-  }
+    data: datas,
+  };
 
   // const {
   //   data,
@@ -76,7 +76,7 @@ const FeaturedBlogSection = () => {
   // }
 
   return (
-    <section className="flex flex-col bg-neutral py-36">
+    <section className="flex flex-col bg-neutral py-40">
       <div className="mx-40">
         <p className="text-neutral-content text-4xl font-bold">
           Featured Blog Posts
@@ -100,7 +100,7 @@ const FeaturedBlogSection = () => {
                     src={item.banner}
                     width={window.innerWidth}
                     height={200}
-                    className="rounded-lg"
+                    className="rounded-lg w-full h-48 object-cover z-0"
                   />
                 </figure>
                 <div>
@@ -114,12 +114,20 @@ const FeaturedBlogSection = () => {
                     <p className="mx-2">{"•"}</p>
                     <p>{item.tags[0]}</p>
                   </div>
-                  <div className="text-lg line-clamp-3 text-neutral-content font-bold">{item.title}</div>
+                  <div className="text-lg line-clamp-3 text-neutral-content font-bold">
+                    {item.title}
+                  </div>
                 </div>
               </div>
             );
           })}
         </div>
+      </div>
+
+      <div className="mx-40 mt-4">
+        <button className="btn btn-outline text-neutral-content mt-8 w-52 capitalize">
+          See more post
+        </button>
       </div>
     </section>
   );
