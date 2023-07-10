@@ -7,73 +7,73 @@ import Image from "next/image";
 import useSWR from "swr";
 
 const FeaturedBlogSection = () => {
-  const datas: Blog[] = [
-    {
-      id: "3wfFqAnkLXDDAe2MmSZj",
-      title:
-        "Exploring the Latest Jetpack Compose Preview — A Deep Dive into Android`s UI Toolkit",
-      description:
-        "Recently, there have been some exciting new trends in Jetpack Compose development, including the release of Jetpack Compose Preview, a powerful tool that allows developers to see their UI changes in real time as they code. If you have ever built mobile apps using cross-platform frameworks like Flutter or React Native, you will be familiar with this functionality.",
-      banner:
-        "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*cwImR3AqDJLX94tKd4LDKQ.jpeg",
-      link: "https://medium.com/@syubbanfakhriya/exploring-the-latest-jetpack-compose-preview-a-deep-dive-into-androids-ui-toolkit-ccae158f2254",
-      tags: ["jetpack compose", "android", "kotlin"],
-      createdAt: { seconds: 1680714000, nanoseconds: 384000000 },
-    },
-    {
-      id: "3wfFqAnkLXDDAe2MmSZj",
-      title: "Exploring the Latest Jetpack",
-      description:
-        "Recently, there have been some exciting new trends in Jetpack Compose development, including the release of Jetpack Compose Preview, a powerful tool that allows developers to see their UI changes in real time as they code. If you have ever built mobile apps using cross-platform frameworks like Flutter or React Native, you will be familiar with this functionality.",
-      banner:
-        "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*cwImR3AqDJLX94tKd4LDKQ.jpeg",
-      link: "https://medium.com/@syubbanfakhriya/exploring-the-latest-jetpack-compose-preview-a-deep-dive-into-androids-ui-toolkit-ccae158f2254",
-      tags: ["jetpack compose", "android", "kotlin"],
-      createdAt: { seconds: 1680714000, nanoseconds: 384000000 },
-    },
-    {
-      id: "3wfFqAnkLXDDAe2MmSZj",
-      title:
-        "Exploring the Latest Jetpack Compose Preview — A Deep Dive into Android`s UI Toolkit",
-      description:
-        "Recently, there have been some exciting new trends in Jetpack Compose development, including the release of Jetpack Compose Preview, a powerful tool that allows developers to see their UI changes in real time as they code. If you have ever built mobile apps using cross-platform frameworks like Flutter or React Native, you will be familiar with this functionality.",
-      banner:
-        "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*cwImR3AqDJLX94tKd4LDKQ.jpeg",
-      link: "https://medium.com/@syubbanfakhriya/exploring-the-latest-jetpack-compose-preview-a-deep-dive-into-androids-ui-toolkit-ccae158f2254",
-      tags: ["jetpack compose", "android", "kotlin"],
-      createdAt: { seconds: 1680714000, nanoseconds: 384000000 },
-    },
-    {
-      id: "3wfFqAnkLXDDAe2MmSZj",
-      title:
-        "Exploring the Latest Jetpack Compose Preview — A Deep Dive into Android`s UI Toolkit",
-      description:
-        "Recently, there have been some exciting new trends in Jetpack Compose development, including the release of Jetpack Compose Preview, a powerful tool that allows developers to see their UI changes in real time as they code. If you have ever built mobile apps using cross-platform frameworks like Flutter or React Native, you will be familiar with this functionality.",
-      banner:
-        "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*cwImR3AqDJLX94tKd4LDKQ.jpeg",
-      link: "https://medium.com/@syubbanfakhriya/exploring-the-latest-jetpack-compose-preview-a-deep-dive-into-androids-ui-toolkit-ccae158f2254",
-      tags: ["jetpack compose", "android", "kotlin"],
-      createdAt: { seconds: 1680714000, nanoseconds: 384000000 },
-    },
-  ];
+  // const datas: Blog[] = [
+  //   {
+  //     id: "3wfFqAnkLXDDAe2MmSZj",
+  //     title:
+  //       "Exploring the Latest Jetpack Compose Preview — A Deep Dive into Android`s UI Toolkit",
+  //     description:
+  //       "Recently, there have been some exciting new trends in Jetpack Compose development, including the release of Jetpack Compose Preview, a powerful tool that allows developers to see their UI changes in real time as they code. If you have ever built mobile apps using cross-platform frameworks like Flutter or React Native, you will be familiar with this functionality.",
+  //     banner:
+  //       "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*cwImR3AqDJLX94tKd4LDKQ.jpeg",
+  //     link: "https://medium.com/@syubbanfakhriya/exploring-the-latest-jetpack-compose-preview-a-deep-dive-into-androids-ui-toolkit-ccae158f2254",
+  //     tags: ["jetpack compose", "android", "kotlin"],
+  //     createdAt: { seconds: 1680714000, nanoseconds: 384000000 },
+  //   },
+  //   {
+  //     id: "3wfFqAnkLXDDAe2MmSZj",
+  //     title: "Exploring the Latest Jetpack",
+  //     description:
+  //       "Recently, there have been some exciting new trends in Jetpack Compose development, including the release of Jetpack Compose Preview, a powerful tool that allows developers to see their UI changes in real time as they code. If you have ever built mobile apps using cross-platform frameworks like Flutter or React Native, you will be familiar with this functionality.",
+  //     banner:
+  //       "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*cwImR3AqDJLX94tKd4LDKQ.jpeg",
+  //     link: "https://medium.com/@syubbanfakhriya/exploring-the-latest-jetpack-compose-preview-a-deep-dive-into-androids-ui-toolkit-ccae158f2254",
+  //     tags: ["jetpack compose", "android", "kotlin"],
+  //     createdAt: { seconds: 1680714000, nanoseconds: 384000000 },
+  //   },
+  //   {
+  //     id: "3wfFqAnkLXDDAe2MmSZj",
+  //     title:
+  //       "Exploring the Latest Jetpack Compose Preview — A Deep Dive into Android`s UI Toolkit",
+  //     description:
+  //       "Recently, there have been some exciting new trends in Jetpack Compose development, including the release of Jetpack Compose Preview, a powerful tool that allows developers to see their UI changes in real time as they code. If you have ever built mobile apps using cross-platform frameworks like Flutter or React Native, you will be familiar with this functionality.",
+  //     banner:
+  //       "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*cwImR3AqDJLX94tKd4LDKQ.jpeg",
+  //     link: "https://medium.com/@syubbanfakhriya/exploring-the-latest-jetpack-compose-preview-a-deep-dive-into-androids-ui-toolkit-ccae158f2254",
+  //     tags: ["jetpack compose", "android", "kotlin"],
+  //     createdAt: { seconds: 1680714000, nanoseconds: 384000000 },
+  //   },
+  //   {
+  //     id: "3wfFqAnkLXDDAe2MmSZj",
+  //     title:
+  //       "Exploring the Latest Jetpack Compose Preview — A Deep Dive into Android`s UI Toolkit",
+  //     description:
+  //       "Recently, there have been some exciting new trends in Jetpack Compose development, including the release of Jetpack Compose Preview, a powerful tool that allows developers to see their UI changes in real time as they code. If you have ever built mobile apps using cross-platform frameworks like Flutter or React Native, you will be familiar with this functionality.",
+  //     banner:
+  //       "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*cwImR3AqDJLX94tKd4LDKQ.jpeg",
+  //     link: "https://medium.com/@syubbanfakhriya/exploring-the-latest-jetpack-compose-preview-a-deep-dive-into-androids-ui-toolkit-ccae158f2254",
+  //     tags: ["jetpack compose", "android", "kotlin"],
+  //     createdAt: { seconds: 1680714000, nanoseconds: 384000000 },
+  //   },
+  // ];
 
-  const data = {
-    data: datas,
-  };
+  // const data = {
+  //   data: datas,
+  // };
 
-  // const {
-  //   data,
-  //   mutate,
-  //   isLoading,
-  //   error,
-  // } = useSWR<RequestStatus<Blog[]>, Error>("/api/blog?limit=4", getFeaturedBlogs, {
-  //   revalidateOnFocus: false,
-  //   revalidateOnReconnect: false,
-  // });
+  const {
+    data,
+    mutate,
+    isLoading,
+    error,
+  } = useSWR<RequestStatus<Blog[]>, Error>("/api/blog?limit=4", getFeaturedBlogs, {
+    revalidateOnFocus: false,
+    revalidateOnReconnect: false,
+  });
 
-  // if (!data) {
-  //   return <></>;
-  // }
+  if (!data) {
+    return <></>;
+  }
 
   return (
     <section className="flex flex-col bg-neutral py-40">
@@ -105,14 +105,14 @@ const FeaturedBlogSection = () => {
                 </figure>
                 <div>
                   <div className="text-base flex flex-row mt-4 mb-2">
-                    <p>
+                    {/* <p>
                       {new Date(item.createdAt.seconds * 1000).toLocaleString(
                         "en-US",
                         { year: "numeric", month: "long", day: "numeric" }
                       )}
-                    </p>
+                    </p> */}
                     <p className="mx-2">{"•"}</p>
-                    <p>{item.tags[0]}</p>
+                    {/* <p>{item.tags[0]}</p> */}
                   </div>
                   <div className="text-lg line-clamp-3 text-neutral-content font-bold">
                     {item.title}

@@ -11,7 +11,11 @@ export async function GET(request: Request) {
     const tag = searchParams.get("tag");
     const createdAt = searchParams.get("createdAt");
 
-    let blogsQuery = prisma.blog.findMany();
+    let blogsQuery = prisma.blog.findMany({
+      include: {
+        tags: true,
+      },
+    });
 
     // Filter by tag
     if (tag) {
@@ -23,6 +27,9 @@ export async function GET(request: Request) {
             },
           },
         },
+        include: {
+          tags: true,
+        },
       });
     }
 
@@ -30,6 +37,9 @@ export async function GET(request: Request) {
     if (count) {
       blogsQuery = prisma.blog.findMany({
         take: parseInt(count, 10),
+        include: {
+          tags: true,
+        },
       });
     }
 
